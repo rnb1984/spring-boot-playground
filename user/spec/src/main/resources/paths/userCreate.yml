@@ -1,0 +1,39 @@
+##########################################
+# Handlers for requests to /user 
+##########################################
+
+##############
+# post request
+##############
+
+post:
+  summary: Create a user
+  operationId: createUser
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: ID of the user to create
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/users/user.yml#/User"
+  responses:
+    '200':
+      description: user created
+    '422':
+      description: required field missing or existing relationship
+    '409':
+      description: conflict
+    '404':
+      description: entity not found
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../components/error.yml#/Error"

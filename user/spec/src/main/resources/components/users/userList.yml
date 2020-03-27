@@ -1,0 +1,13 @@
+UserList:
+  required:
+    - users
+  properties:
+    users:
+      type: array
+      items:
+        $ref: "user.yml#/User"
+          
+          
+  
+               
+      

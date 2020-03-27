@@ -1,0 +1,15 @@
+User:
+  required:
+    - id
+    - name
+  properties:
+    id:
+      type: "string"
+    name:
+      type: "string"
+    info:
+      type: "string"
+    homes:
+      type: array
+      items:
+        type: "string"

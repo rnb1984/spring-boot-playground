@@ -1,0 +1,10 @@
+openapi: "3.0.0"
+
+info:
+  version: 1.0.0
+  title: Betameal Service
+
+paths:
+  /user:
+    $ref: "../paths/userCreate.yml#/"
+  
