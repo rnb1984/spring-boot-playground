@@ -1,0 +1,39 @@
+##########################################
+# Handlers for requests to /homr 
+##########################################
+
+##############
+# post request
+##############
+
+post:
+  summary: Create a home
+  operationId: createHome
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: ID of the home to create
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/homes/home.yml#/Home"
+  responses:
+    '200':
+      description: home created
+    '422':
+      description: required field missing or existing relationship
+    '409':
+      description: conflict
+    '404':
+      description: entity not found
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../components/error.yml#/Error"

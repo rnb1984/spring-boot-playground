@@ -1,13 +1,13 @@
-package com.playground.home.home;
+package com.playground.analytics.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HomeApplication {
+public class AnalyticsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HomeApplication.class, args);
+		SpringApplication.run(AnalyticsApplication.class, args);
 	}
 
 }

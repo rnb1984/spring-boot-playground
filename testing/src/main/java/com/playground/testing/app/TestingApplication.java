@@ -1,4 +1,4 @@
-package com.playground.testing.testing;
+package com.playground.testing.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

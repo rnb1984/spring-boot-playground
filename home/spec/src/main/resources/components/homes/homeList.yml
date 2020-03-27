@@ -1,0 +1,13 @@
+HomeList:
+  required:
+    - homes
+  properties:
+    homes:
+      type: array
+      items:
+        $ref: "home.yml#/Home"
+          
+          
+  
+               
+      

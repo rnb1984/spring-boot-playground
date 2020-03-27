@@ -1,0 +1,19 @@
+Home:
+  required:
+    - id
+    - name
+  properties:
+    id:
+      type: "string"
+    name:
+      type: "string"
+    info:
+      type: "string"
+    neighbours:
+      type: array
+      items:
+        $ref: "home.yml#/Home"
+    users:
+      type: array
+      items:
+        type: "string"

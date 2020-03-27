@@ -1,0 +1,24 @@
+##########################################
+# Handlers for requests to /homes 
+##########################################
+
+##############
+# get request
+##############
+
+get:
+  summary: List all homes
+  operationId: listHomes
+  responses:
+    '200':
+      description: An array of homes
+      content:
+        application/json:    
+          schema:
+            $ref: "./components/homes/homeList.yml#/HomeList"
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "./components/error.yml#/Error"

@@ -1,0 +1,13 @@
+Error:
+  required:
+    - code
+    - message
+  properties:
+    code:
+      type: integer
+      format: int32
+      description: |
+        100 - Body missing
+        101 - Name property missing
+    message:
+      type: string
