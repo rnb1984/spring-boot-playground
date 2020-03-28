@@ -3,3 +3,6 @@ home/spec/target/*
 
 user/.DS_Store
 user/spec/target/*
+.settings/
+.project
+.classpath

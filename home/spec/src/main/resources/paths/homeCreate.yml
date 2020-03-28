@@ -23,7 +23,7 @@ post:
         schema:
           $ref: "../components/homes/home.yml#/Home"
   responses:
-    '200':
+    '201':
       description: home created
     '422':
       description: required field missing or existing relationship
