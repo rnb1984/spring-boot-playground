@@ -21,6 +21,6 @@
     <modules>
 		<module>spec</module>
         <module>service</module>
-		<!-- <module>componenttest</module>  -->
+		<module>componenttest</module> 
     </modules>
 </project>

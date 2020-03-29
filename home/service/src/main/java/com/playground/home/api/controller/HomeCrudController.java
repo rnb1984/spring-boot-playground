@@ -56,7 +56,7 @@ public class HomeCrudController {
 	@PostMapping(path = "homes")
 	@GetMapping
 	public ResponseEntity listHomes() {
-		HomeListApiEntity response = new HomeListApiEntity();
+		HomeListApiEntity response = homeService.getAll();
 		return new ResponseEntity<HomeListApiEntity>(response, HttpStatus.OK);
 	}
 

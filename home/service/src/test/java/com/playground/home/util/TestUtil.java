@@ -6,6 +6,7 @@ package com.playground.home.util;
 import org.springframework.stereotype.Service;
 
 import com.playground.home.api.model.HomeApiEntity;
+import com.playground.home.db.model.Home;
 
 import uk.co.jemos.podam.api.AbstractRandomDataProviderStrategy;
 import uk.co.jemos.podam.api.PodamFactory;
@@ -33,7 +34,10 @@ public class TestUtil {
 
 	public static HomeApiEntity createHomeApiPojo() {
 		return beanFactory.manufacturePojo(HomeApiEntity.class);
+	}
 
+	public static Home createHomePojo() {
+		return beanFactory.manufacturePojo(Home.class);
 	}
 
 }
