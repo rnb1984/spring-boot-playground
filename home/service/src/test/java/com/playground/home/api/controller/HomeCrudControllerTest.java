@@ -5,6 +5,7 @@ package com.playground.home.api.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -18,6 +19,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import com.playground.home.api.model.HomeApiEntity;
+import com.playground.home.api.model.HomeListApiEntity;
 import com.playground.home.api.service.HomeService;
 import com.playground.home.exceptions.EntityAlreadyExistsException;
 import com.playground.home.exceptions.InvalidRequestException;
@@ -37,6 +39,7 @@ public class HomeCrudControllerTest {
 	private HomeService mockHomeService;
 
 	private HomeApiEntity defaultHomeApiEntity;
+	private HomeListApiEntity defaultHomeListApiEntity;
 
 	/**
 	 * @throws java.lang.Exception
@@ -45,6 +48,7 @@ public class HomeCrudControllerTest {
 	public void setUp() throws Exception {
 
 		defaultHomeApiEntity = TestUtil.createHomeApiPojo();
+		defaultHomeListApiEntity = TestUtil.createListHomeApiPojo();
 	}
 
 	/**
@@ -82,9 +86,17 @@ public class HomeCrudControllerTest {
 	 */
 	@Test
 	public void testListHomes() {
+		when(mockHomeService.getAll()).thenReturn(defaultHomeListApiEntity);
 		ResponseEntity response = injectedHomeController.listHomes();
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertNotNull(response.getBody());
+	}
+
+	@Test
+	public void testListHomesNull() {
+		ResponseEntity response = injectedHomeController.listHomes();
+		assertEquals(HttpStatus.OK, response.getStatusCode());
+		assertNull(response.getBody());
 	}
 
 }

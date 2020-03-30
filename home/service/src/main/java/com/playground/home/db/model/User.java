@@ -13,7 +13,6 @@ import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.Index;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
-import org.neo4j.ogm.id.UuidStrategy;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -33,7 +32,7 @@ public class User implements Identifiable {
 	 */
 
 	@Id
-	@GeneratedValue(strategy = UuidStrategy.class)
+	@GeneratedValue
 	private Long internalId;
 
 	@NotNull

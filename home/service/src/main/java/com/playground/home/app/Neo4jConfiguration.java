@@ -27,8 +27,6 @@ public class Neo4jConfiguration {
 		// @formatter:off
 		return new org.neo4j.ogm.config.Configuration.Builder().autoIndex(autoIndexes).uri(uri)
 				.credentials(username, password).build();
-		// @formatter:on
-
 	}
 
 	@Bean

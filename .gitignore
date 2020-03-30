@@ -6,3 +6,6 @@ user/spec/target/*
 .settings/
 .project
 .classpath
+home/components/src/test/java/bdd/cucumber/LocalRunner.java
+home/service/src/main/resources/application.properties
+.eclipse.m2e.core.prefs
